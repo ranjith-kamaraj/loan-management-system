@@ -3,15 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "^4.3.1",
+    "concurrently": "^4.1.0",
+    "cookie-parser": "~1.4.3",
+    "cross-env": "^5.2.0",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "express-generator": "^4.16.0",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "mongoose": "^5.4.14",
+    "morgan": "~1.9.0",
+    "proxy": "^0.2.4",
     "react": "^16.8.2",
+    "react-bootstrap": "^1.0.0-beta.5",
     "react-dom": "^16.8.2",
-    "react-scripts": "2.1.5"
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.5",
+    "reactstrap": "^7.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "sc": "cross-env PORT=80 react-scripts start",
+    "ss": "node server/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "concurrently \"npm run sc\" \"npm run ss\""
   },
   "eslintConfig": {
     "extends": "react-app"
